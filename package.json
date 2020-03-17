@@ -1,0 +1,35 @@
+{
+  "name": "appcenter-build-differ",
+  "version": "0.0.1",
+  "description": "Detect differences between AppCenter builds. Help diagnose problems due to node module dependency changes.",
+  "author": "Eldon Ahrold",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bin": {
+    "@eahrold/appcenter-build-differ": "bin/index.js",
+    "appcenter-build-differ": "bin/index.js"
+  },
+  "scripts": {
+    "build": "babel src/index.js --out-file bin/index.js",
+    "clean": "rm -rf bin",
+    "format": "prettier --write src/*.js"
+  },
+  "peerDependencies": {
+    "appcenter-cli": "^2.3.4"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/runtime": "^7.8.7",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-env": "^7.8.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1"
+  }
+}
